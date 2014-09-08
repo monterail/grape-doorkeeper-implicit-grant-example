@@ -1,9 +1,15 @@
 doctype
-html
+html ng-app="myApp"
   head
     title Rails4Bootstrap
-    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
-    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
+    = js_env
     = csrf_meta_tags
   body
-    = yield
+    .container
+      - flash.each do |_, value|
+        .notice= value
+
+      = yield
+

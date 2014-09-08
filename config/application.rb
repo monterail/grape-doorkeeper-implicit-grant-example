@@ -15,4 +15,6 @@ class Application < Rails::Application
   end
 
   config.exceptions_app = self.routes
+  config.filter_parameters << :password
 end
+

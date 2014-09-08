@@ -1,1 +1,2 @@
-# Permanenent configuraton here. For local config use .env file.
+HOST: 'localhost:3000'
+

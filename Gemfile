@@ -1,40 +1,28 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
-ruby '2.1.0'
+ruby '2.1.2'
 
 # Core
-gem 'rails', '4.0.2'
+gem 'rails', '4.1.4'
 gem 'pg', '~> 0.17.1'
+gem 'figaro'
 
-# Backend
-gem 'figaro', '~> 0.7.0'
-gem 'dotenv-rails', '~> 0.9.0'
-gem 'jbuilder', '~> 2.0.2'
-gem 'yajl-ruby', '~> 1.2.0', :require => 'yajl'
+gem 'grape', '~> 0.8.0'
+gem 'devise'
 
-# Frontend
-# For assets precompilation on non-macs install node.js.
-# therubyracer is discouraged because of high memory usage.
-gem 'sass-rails', '~> 4.0.0'
-gem 'uglifier', '~> 2.4'
+gem 'rails-assets-angular', '~> 1.2.9'
+gem 'rails-assets-angular-ui-router', '~> 0.2.9'
+gem 'rails-assets-ngstorage'
+gem 'angular-rails-templates'
+gem 'ngannotate-rails'
+gem 'jquery-rails'
+
 gem 'coffee-rails', '~> 4.0.0'
 gem 'slim-rails', '~> 2.0'
-gem 'jquery-rails'
-gem 'turbolinks', '~> 2.2.0'
-gem 'quiet_assets', '~> 1.0'
+gem 'sass-rails'
 
 group :development do
-  gem 'awesome_print'
-  gem 'better_errors', :platform => :ruby
-  gem 'binding_of_caller', :platform => :ruby
-
   gem 'pry', '0.9.12.2'
-  gem 'pry-doc'
-  gem 'pry-byebug'
-  gem 'pry-stack_explorer'
 end
 
-group :test do
-  gem 'rspec-rails', '~> 2.14'
-  gem 'database_cleaner', '~> 1.2'
-end
