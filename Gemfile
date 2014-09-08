@@ -8,8 +8,10 @@ gem 'rails', '4.1.4'
 gem 'pg', '~> 0.17.1'
 gem 'figaro'
 
-gem 'grape', '~> 0.8.0'
+gem 'grape', '~> 0.9.0'
 gem 'devise'
+gem 'doorkeeper',       '~> 1.4.0'
+gem 'grape-doorkeeper', '~> 0.0.2'
 
 gem 'rails-assets-angular', '~> 1.2.9'
 gem 'rails-assets-angular-ui-router', '~> 0.2.9'
