@@ -6,7 +6,8 @@ module JsEnv
 
   def js_env
     data = {
-      host: ENV['HOST']
+      host: ENV['HOST'],
+      application_id: ENV['APPLICATION_ID']
     }
 
     <<-EOS.html_safe
