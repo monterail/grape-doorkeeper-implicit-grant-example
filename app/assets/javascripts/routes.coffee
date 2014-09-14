@@ -36,3 +36,10 @@ app.config ($stateProvider, $urlRouterProvider) ->
 
         $state.go 'index'
 
+  $stateProvider
+    .state '401',
+      url: '/unauthorized'
+      controller: ($state, AccessToken) ->
+        $state.go 'index' if AccessToken.get()
+      templateUrl: '401.html'
+
