@@ -1,5 +1,12 @@
 .oauth ng-controller="AuthCtrl"
   a.oauth__link.oauth__link--login(
     ng-href="{{ loginUrl }}"
+    ng-hide="loggedIn"
   ) Login
+
+  button.oauth__link.oauth__link--logout(
+    type="button"
+    ng-click="logout()"
+    ng-show="loggedIn"
+  ) Logout
 
