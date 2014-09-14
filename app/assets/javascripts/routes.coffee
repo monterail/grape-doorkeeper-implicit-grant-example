@@ -27,3 +27,12 @@ app.config ($stateProvider, $urlRouterProvider) ->
           User.all().then (response) -> response.data
       templateUrl: 'all.html'
 
+  $stateProvider
+    .state 'accessToken',
+      url: '/access_token=:response'
+      controller: ($window, $state, $stateParams, AccessToken) ->
+        token = $stateParams.response.match(/^(.*?)&/)[1]
+        AccessToken.set(token)
+
+        $state.go 'index'
+
