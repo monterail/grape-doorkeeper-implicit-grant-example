@@ -1,18 +1,19 @@
-# Rails 4 Bootstrap [![Dependency Status][gemnasium-img-url]][gemnasium-url] [![Code Climate][codeclimate-img-url]][codeclimate-url] [![Build Status][travis-img-url]][travis-url]
+Sample application to Codetunes' blogpost: [OAuth Implicit Grant with Angular, Grape and Doorkeeper]()
 
-[codeclimate-img-url]: https://codeclimate.com/github/sheerun/rails4-bootstrap.png
-[codeclimate-url]: https://codeclimate.com/github/sheerun/rails4-bootstrap
-[gemnasium-img-url]: https://gemnasium.com/sheerun/rails4-bootstrap.png
-[gemnasium-url]: https://gemnasium.com/sheerun/rails4-bootstrap
-[travis-img-url]: https://travis-ci.org/sheerun/rails4-bootstrap.png
-[travis-url]: https://travis-ci-org/sheerun/rails4-bootstrap
+# Setup
 
-My systematic way of making bullet-proof Rails 4 bootstrap template.
+```
+bundle install
+rake db:setup
+rails s
+```
 
-Every commit is assigned to Github issue. Each alternative being evaluated.
+You can log in with:
 
-Essential things in the master branch, optional features in branches, ready for fast-forward merging.
+```
+Username: jon.snow@winterfell.com
+Password: password
+```
 
-## License
+If you want to run this application under different host than `localhost:3000`, you must change `config/application.yml` (and run `rake db:reset` if you've already done setup)
 
-As Rails, this project is [MIT-licensed](http://opensource.org/licenses/mit-license.php). As usual, you are awesome.
